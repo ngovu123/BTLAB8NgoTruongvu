@@ -1,4 +1,4 @@
-package com.example.btlab8_ngotruongvu;
+package com.example.bth8;
 
 import org.junit.Test;
 

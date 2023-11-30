@@ -1,4 +1,4 @@
-package com.example.btlab8_ngotruongvu;
+package com.example.bth8;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.btlab8_ngotruongvu", appContext.getPackageName());
+        assertEquals("com.example.bth8", appContext.getPackageName());
     }
 }

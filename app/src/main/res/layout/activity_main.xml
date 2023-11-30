@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <!-- Spinner for selecting department -->
+    <!-- Title -->
     <TextView
+        android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chọn Phòng ban"
-        android:textSize="16sp"
-        android:padding="8dp" />
+        android:text="Quản lý nhân viên"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
 
+    <!-- Spinner chọn phòng ban -->
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerPhongBan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
 
     <!-- Buttons -->
     <LinearLayout
+        android:id="@+id/buttonLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerPhongBan"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/applyButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonApply"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="APPLY" />
+            android:text="Apply" />
 
         <Button
-            android:id="@+id/allButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonAll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/applyButton"
-            android:text="ALL" />
+            android:text="All" />
 
         <Button
-            android:id="@+id/closeButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonClose"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="CLOSE" />
+            android:text="Close" />
     </LinearLayout>
 
-    <!-- List of employees -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Danh sách nhân viên"
-        android:textSize="16sp"
-        android:padding="8dp" />
-
+    <!-- ListView -->
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listViewNhanVien"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLayout"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+</RelativeLayout>
